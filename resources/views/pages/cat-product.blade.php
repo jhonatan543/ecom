@@ -118,7 +118,9 @@
 
                         @forelse ($products as $product)
                         @if($product->status == 1)
+
                         <div class="col-lg-4 col-md-6 col-sm-6">
+
                         <div class="featured__item">
                             <div class="featured__item__pic set-bg" data-setbg="{{ asset($product->image_one) }}">
                                 <ul class="featured__item__pic__hover">
@@ -139,7 +141,9 @@
                                 <h5>S/.{{ $product->price }}</h5>
                             </div>
                         </div>
+
                         </div>
+
 
                         @elseif($product->status == 0)
                         <h4 class="text-danger">No se encontro Productos</h4>

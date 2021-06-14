@@ -97,6 +97,13 @@ class AdminSeeder extends Seeder
             'password' => Hash::make('12345'),
         ]);
 
+        DB::table('users')->insert([
+            'name' => 'Ana',
+            'email' => 'Ana@gmail.com',
+            'status' => '2',
+            'password' => Hash::make('12345'),
+        ]);
+
 
 //categorias
         DB::table('categories')->insert([
