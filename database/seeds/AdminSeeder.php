@@ -513,7 +513,7 @@ DB::table('products')->insert([
     'product_name' => 'Bividi',
     'product_slug' => 'Bividi',
     'product_code' => '7546',
-    'product_quantity' => '50',
+    'product_quantity' => '20',
     'short_description' => 'BIVIDI DEPORTIVO SAINT IW 20B',
     'long_description' => 'Bividi color amarillo con rayas azules para niño, de buena tela y excelente
 			   calidad, asegurando siempre la comodidad.',
