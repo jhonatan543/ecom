@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Order;
 use App\User;
+use App\Product;
 use App\OrderItem;
 use App\Shipping;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
@@ -14,6 +16,12 @@ use Illuminate\Validation\Rule;
 
 class UserController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function order(){
         $orders = Order::where('user_id',Auth::id())->latest()->get();
         return view('pages.profile.order',compact('orders'));
@@ -45,7 +53,12 @@ class UserController extends Controller
 
     public function index1(){
 
-        return view('admin.home');
+        $products = Product::latest()->get();
+
+        $orders = Order::latest()->get();
+        $tiempo = mt_rand(1,3);
+
+        return view('admin.home',compact('orders','tiempo','products'));
     }
 
 // Delete category

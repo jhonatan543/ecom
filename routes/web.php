@@ -119,7 +119,8 @@ Route::get('add/to-wishlist/{prouct_id}','WishlistController@addToWishlist');
 Route::get('wishlist','WishlistController@wishPage');
 Route::get('wishlist/destroy/{wishlist_id}','WishlistController@destroy');
 // ESTADISTICAS
-Route::get('admin/home','CartController@cartPage1');
+
+/* Route::get('admin/home','CartController@cartPage1'); */
 
 //shop page rotues
 Route::get('shop','FontendController@shopPage')->name('shop.page');

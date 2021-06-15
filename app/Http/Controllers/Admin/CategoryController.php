@@ -10,10 +10,10 @@ use Carbon\Carbon;
 class CategoryController extends Controller
 {
 
-    /* public function __construct()
+    public function __construct()
     {
-        $this->middleware('auth:admin');
-    } */
+        $this->middleware('auth');
+    }
 
     public function index(){
         $categories = Category::latest()->get();

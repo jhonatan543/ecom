@@ -49,8 +49,7 @@ class CartController extends Controller
 
     }
 
-    public function cartPage1(){
-
+   /*  public function cartPage1(){
 
 
         $products = Product::latest()->get();
@@ -59,7 +58,7 @@ class CartController extends Controller
         $tiempo = mt_rand(1,3);
 
         return view('admin.home',compact('orders','tiempo','products'));
-    }
+    } */
 
     // --------- cart destroy ------
     public function destroy($cart_id){
