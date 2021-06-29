@@ -147,7 +147,7 @@
                             <div class="product__item__pic set-bg" data-setbg="{{ asset($product->image_one) }}">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="{{ url('add/to-wishlist/'.$product->id) }}"><i class="fa fa-heart"></i></a></li>
-                                    <li><a href="{{ url('product/details/'.$product->id) }}"><i class="fa fa-retweet"></i></a></li>
+                                    <li><a href="{{ url('product/details/'.$product->id) }}"><i class="fa fa-eye"></i></a></li>
                                     <form action="{{ url('add/to-cart/'.$product->id) }}" method="POST">
                                         @csrf
                                     <input type="hidden" name="price" value="{{ $product->price }}">

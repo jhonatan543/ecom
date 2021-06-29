@@ -131,14 +131,12 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="checkout__order">
                                 <h4>Tu Pedido</h4>
-                                <div class="checkout__order__products">Productos <span>Total</span></div>
+                                <div class="checkout__order__products">Productos <span>SubTotal</span></div>
                                 <ul>
                                     @foreach ($carts as $cart)
                                     <li>{{  $cart->product->product_name }} ({{ $cart->qty }}) <span>S/.{{ $cart->price * $cart->qty }}</span></li>
                                     @endforeach
                                 </ul>
-
-
 
                         @if (Session::has('coupon'))
                                 <div class="checkout__order__total">Total <span>S/. {{ $subtotal - session()->get('coupon')['discount_amount'] }}</span></div>
