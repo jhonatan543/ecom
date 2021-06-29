@@ -15,7 +15,7 @@
                      @endphp
                         <ul>
                             @foreach ($categoriess as $row)
-                            <li><a href="#">{{ $row->category_name }}</a></li>
+                            <li><a href="{{ url('category/product-show/'.$row->id) }}">{{ $row->category_name }}</a></li>
                             @endforeach
                         </ul>
                     </div>
