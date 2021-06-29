@@ -101,7 +101,7 @@
                      $ordercount= $orders->count('id');
                      @csrf
                      @endphp
-              <span class="sparkline2" style="font-size: 42px;">5,3,9,6,5,9,7,3,5,2</span>
+              <span class="sparkline2" style="font-size: 42px;"></span>
               <div>
               @if( $ldate  === '06')
                 <span class="tx-11 tx-white-6">Junio</span>
@@ -140,7 +140,7 @@
               <a href="" class="tx-white-8 hover-white"><i class="icon ion-android-more-horizontal"></i></a>
             </div><!-- card-header -->
             <div class="d-flex align-items-center justify-content-between">
-              <span class="sparkline2" style="font-size: 42px;">5,3,9,6,5,9,7,3,5,2</span>
+              <span class="sparkline2" style="font-size: 42px;"></span>
                     @php
                      $ordersum = $orders->sum('total');
                      @csrf

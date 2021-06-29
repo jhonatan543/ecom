@@ -113,7 +113,7 @@
                             </div>
                             <div class="checkout__input">
                                 <p>Dirección<span>*</span></p>
-                                <input type="text" placeholder="Avenida" class="checkout__input__add" name="address">
+                                <input type="text" placeholder="Avenida y Referencia" class="checkout__input__add" name="address">
                                 @error('address')
                                      <strong class="text-danger">{{ $message }}</strong>
                                 @enderror
@@ -141,7 +141,7 @@
 
 
                         @if (Session::has('coupon'))
-                                <div class="checkout__order__total">Total <span>$ {{ $subtotal - session()->get('coupon')['discount_amount'] }}</span></div>
+                                <div class="checkout__order__total">Total <span>S/. {{ $subtotal - session()->get('coupon')['discount_amount'] }}</span></div>
 
                                 <input type="hidden" name="coupon_discount" value="{{ session()->get('coupon')['coupon_discount'] }}">
                                 <input type="hidden" name="subtotal" value="{{ $subtotal }}">
@@ -199,7 +199,7 @@
         Swal.fire({
   title: '<a class="tyc">Términos y condiciones<br> "ACOMSIV"</a>',
    width: 600,
-  html: '<p class="indicador">SE COMPROMETE A REALIZAR SU MEJOR ESFUERZO PARA ASEGURAR LA DISPONIBILIDAD CONTINUA DE SUS SERVICIOS, ASÍ COMO PARA ASEGURAR LA AUSENCIA DE ERRORES EN CUALQUIER TRANSMISIÓN DE INFORMACIÓN QUE PUDIERA TENER LUGAR EN LAS TRANSACCIONES; SIN EMBARGO, RIPLEY NO SE HACE RESPONSABLE CUANDO SUS SERVICIOS SE VEAN AFECTADOS POR LA NATURALEZA MISMA DEL INTERNET. ASIMISMO, LOS CLIENTES DECLARAN CONOCER QUE EL ACCESO A LOS SERVICIOS DEL SITIO WEB PODRÍA OCASIONALMENTE VERSE SUSPENDIDO O RESTRINGIDO POR LA REALIZACIÓN DE TRABAJOS DE MANTENIMIENTO O ADMINISTRACIÓN DE LOS PRODUCTOS OFERTADOS.ACOMSIV PODRÁ ACTUALIZAR Y/O MODIFICAR LOS PRESENTES TÉRMINOS Y CONDICIONES SIN PREVIO AVISO. POR ESTE MOTIVO RECOMENDAMOS REVISAR LOS TÉRMINOS Y CONDICIONES CADA VEZ QUE UTILICE LA PÁGINA WEB, YA QUE LA VERSIÓN APLICABLE SERÁ LA QUE SE ENCUENTRE COLGADA AL MOMENTO DE LA CONSULTA.</p>',
+  html: '<p class="indicador">1. LOS PEDIDOS SÓLO PODRÁN SER ENVIADOS A LAS PERSONAS QUE VIVEN DENTRO DE RANGO DE LUGARES A REALIZAR EL DELIVERY (SANTA ISABEL DE VILLA, BRISAS, 3 DE OCTUBRE, DELICIAS, TERRAZAS) 2. LOS HORARIOS DE ATENCIÓN PRESENCIAL SON DE LUNES A DOMINGO DE 10:00 AM A 7:00PM, CUALQUIER CAMBIO DE HORARIO SE     COMUNICARÁ A TRAVÉS DEL SITIO WEB. 3. LOS PAGOS POR EL PEDIDO ENTREGADO SERÁ REALIZADO EN CONTRAENTREGA. EN CASO SE DESEE REALIZAR EL PAGO OTRO DÍA, DEBE COMUNICARSE POR VÍA WHATSAPP CON LA DUEÑA DEL NEGOCIO PARA HACER LA COORDINACIÓN RESPECTIVA. 4. NO SE COBRARÁ NINGÚN PAGO ADICIONAL POR EL SERVICIO DE DELIVERY. 5. PARA PROSEGUIR CON LA ORDEN DEL PEDIDO DEBE SIEMPRE ESTAR DE ACUERDO Y ACEPTAR LOS TÉRMINOS Y CONDICIONES.</p>',
   allowOutsideClick: false,
   confirmButtonColor: 'black',
   confirmButtonText: '<a class="entendido2">Entendido</a>'

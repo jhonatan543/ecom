@@ -38,10 +38,10 @@ class ProductController extends Controller
             'category_id' => 'required|max:255',
             'brand_id' => 'required|max:255',
             'short_description' => 'required|min:3|max:50',
-            'long_description' => 'required|min:3|max:100',
-            'image_one' => 'required|mimes:jpg,jpeg,png,gif',
-            'image_two' => 'required|mimes:jpg,jpeg,png,gif',
-            'image_three' => 'required|mimes:jpg,jpeg,png,gif',
+            'long_description' => 'required|min:3|max:1000',
+            'image_one' => 'required|mimes:jpg,jpeg,png',
+            'image_two' => 'required|mimes:jpg,jpeg,png',
+            'image_three' => 'required|mimes:jpg,jpeg,png',
         ],[
             'category_id.required' => 'select category name',
             'brand_id.required' => 'select brand name',
@@ -109,7 +109,7 @@ class ProductController extends Controller
             'category_id' => 'required|max:255',
             'brand_id' => 'required|max:255',
             'short_description' => 'required|min:3|max:50',
-            'long_description' => 'required|min:3|max:100',
+            'long_description' => 'required|min:3|max:1000',
         ],[
             'category_id.required' => 'select category name',
             'brand_id.required' => 'select brand name',
@@ -139,9 +139,9 @@ class ProductController extends Controller
         $old_three = $request->img_three;
 
         $request->validate([
-            'image_one' => 'required|mimes:jpg,jpeg,png,gif',
-            'image_two' => 'required|mimes:jpg,jpeg,png,gif',
-            'image_three' => 'required|mimes:jpg,jpeg,png,gif',
+            'image_one' => 'required|mimes:jpg,jpeg,png',
+            'image_two' => 'required|mimes:jpg,jpeg,png',
+            'image_three' => 'required|mimes:jpg,jpeg,png',
         ]);
 
         if ($request->has('image_one') && $request->has('image_two')) {
@@ -234,13 +234,13 @@ class ProductController extends Controller
      // status inactive
      public function Inactive($product_id){
         Product::findOrFail($product_id)->update(['status' => 0]);
-        return Redirect()->back()->with('status','Product inactive');
+        return Redirect()->back()->with('status','Producto Inactivo');
     }
 
 
     // status active
     public function Active($product_id){
         Product::findOrFail($product_id)->update(['status' => 1]);
-        return Redirect()->back()->with('status','Product Activated');
+        return Redirect()->back()->with('status','Product Activado');
     }
 }

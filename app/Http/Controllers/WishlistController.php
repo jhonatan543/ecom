@@ -14,7 +14,7 @@ class WishlistController extends Controller
                 'user_id' => Auth::id(),
                 'product_id' => $product_id,
             ]);
-            return Redirect()->back()->with('cart','Product added On Wishlist');
+            return Redirect()->back()->with('cart','Producto agregado a lista de deseos');
         }else{
             return Redirect()->route('login')->with('loginError','Primero Inicia Sesión en su Cuenta');
         }
@@ -29,7 +29,7 @@ class WishlistController extends Controller
      // --------- cart destroy ------
      public function destroy($wishlist_Id){
         Wishlist::where('id',$wishlist_Id)->where('user_id',Auth::id())->delete();
-        return Redirect()->back()->with('cart_delete','Wishist Product Removed');
+        return Redirect()->back()->with('cart_delete','Producto Removido de la lista de deseos');
     }
 
 }

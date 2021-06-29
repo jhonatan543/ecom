@@ -1,12 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACOMSIV</title>
+    <style>
+body {
+            background-color: #ffffff;
+            font-family: Arial;
+            font-size: 13px;
+            box-sizing: border-box;
+        }
+
+        table {
+            background-color: white;
+            text-align: left;
+            border-collapse: collapse;
+            width: 100%;
+
+        }
+
+        th,
+        td {
+            border: 1px solid #000;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 2px;
+        }
+
+        thead {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            display: table-header-group;
+            text-align: left;
+
+        }
+
+        tr:nth-child(even) {
+            background-color: rgb(255, 255, 255);
+        }
+
+        tr:hover td {
+            background-color: #ffffff;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        </style>
+
+<body >
 <center>
 <h2>INFORMACIÓN DE SU PEDIDO N°{{ $order->id }}</h2>
 </center>
 <h4>INFORMACIÓN GENERAL</h4>
 
-                    <table style="margin-left: 110px;">
+
+                    <table >
                     <thead>
                       <tr>
-                        <th style = "border: 1px solid #000; padding: 5px;">N°Boleta</th>
+                        <th style = "  border: 1px solid #000; padding: 5px;">N°Boleta</th>
                         <th style = "border: 1px solid #000; padding: 5px; ">Tipo de Pago</th>
                         <th style = "border: 1px solid #000; padding: 5px;">SubTotal</th>
                         <th style = "border: 1px solid #000; padding: 5px;">Total</th>
@@ -41,7 +97,7 @@
 
 <h4>INFORMACIÓN DEL ENVÍO</h4>
 
-                  <table  >
+                  <table >
                       <thead>
                         <tr>
                           <th style = "border: 1px solid #000;   ">Nombre del Envío</th>
@@ -68,7 +124,7 @@
 
 <h4>INFORMACIÓN DE PRODUCTOS</h4>
 
-        <table style="margin-left: 120px;">
+        <table >
                       <thead>
                         <tr>
                           <th style = "border: 1px solid #000; padding: 5px; ">Código del Producto </th>
@@ -88,3 +144,7 @@
                       </tbody>
 
                     </table>
+</body>
+</html>
+
+

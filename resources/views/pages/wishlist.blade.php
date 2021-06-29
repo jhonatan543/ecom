@@ -108,6 +108,9 @@
                                         <form action="{{ url('add/to-cart/'.$row->product_id) }}" method="POST">
                                             @csrf
                                         <input type="hidden" name="price" value="{{ $row->product->price }}">
+
+                                    <input type="hidden" name="qtyproduct" value="{{ $row->product->product_quantity }}">
+
                                        <button class="btn btn-sm btn-danger">Agregar al Carrito</button>
                                     </form>
                                     </td>

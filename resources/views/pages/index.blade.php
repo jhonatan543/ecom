@@ -95,9 +95,7 @@
                                      <input type="hidden" name="qtyproduct" value="{{ $product->product_quantity }}">
                                      <input type="hidden" name="price" value="{{ $product->price }}">
                                     <li><button type="submit" ><i class="fa fa-shopping-cart"></i></button></li>
-
                                 </form>
-
                                 </ul>
                             </div>
                             <div class="featured__item__text">
@@ -169,7 +167,7 @@
                                         </div>
                                         <div class="latest-product__item__text">
                                             <h6>{{ $product->product_name }}</h6>
-                                            <span>${{ $product->price }}</span>
+                                            <span>S/.{{ $product->price }}</span>
                                         </div>
                                     </a>
                                     @endforeach
@@ -229,7 +227,4 @@
             </div>
         </section>
         <!-- Latest Product Section End -->
-
-
-
 @endsection
