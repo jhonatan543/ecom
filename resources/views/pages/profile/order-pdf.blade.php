@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,13 +51,75 @@ body {
             text-align: center;
         }
 
+        #logo {
+    float: left;
+    top: 4px;
+    }
+
+h2.name {
+   font-family: 'Fjalla One', sans-serif;
+  font-size: 1.4em;
+  font-weight: normal;
+  margin: 0;
+}
+
+ #company {
+  text-align: right;
+}
+
+a {
+  color: #233e8b;
+   font-family: 'Fjalla One', sans-serif;
+  text-decoration: none;
+}
+
+.date {
+    font-family: 'Fjalla One', sans-serif;
+  font-size: 1.1em;
+  color: #777777;
+}
+
+
         </style>
 
 <body >
 <center>
+<div id="logo" style="margin-top:5px;">
+<img src="{{ public_path('fontend') }}/img/acomsiv.png" width="200px" alt="acomsiv">
+</div>
+<div id="company">
+        <h2 class="name">ACOMSIV Ropas Ana</h2>
+        <div class="date">AV. VISTA ALEGRE INT. LT.2 A.H.</div>
+        <div class="date">SANTA ISABEL DE VILLA - SANTIAGO DE SURCO </div>
+        <div class="date">+51 940433974</div>
+        <div ><a href="a.pumallihua.quinte@gmail.com">a.pumallihua.quinte@gmail.com</a></div>
+</div>
+      <hr>
+      @if($order->created_at  == true)
+      <div><b>Fecha y hora del pedido:</b> {{ $order->created_at }}</div>
+      @else
+      <div><b>Fecha y hora del pedido:</b> 2021-07-05 10:06:45 </div>
+      @endif
+
+      @if($order->updated_at  == true)
+      <div><b>Fecha y hora de la Actualización del Estado :</b> {{ $updated_at }}</div>
+      @else
+      <div ><b>Fecha y hora de la Actualización del Estado :</b>
+          @if($order->created_at  == true)
+          {{ $order->created_at }}
+          @else
+         2021-07-05 10:06:45
+         @endif
+        </div>
+      @endif
+
+
 <h2>INFORMACIÓN DE SU PEDIDO N°{{ $order->id }}</h2>
 </center>
 <h4>INFORMACIÓN GENERAL</h4>
+
+
+
 
 
                     <table >
