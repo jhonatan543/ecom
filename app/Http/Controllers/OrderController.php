@@ -20,6 +20,7 @@ class OrderController extends Controller
             'shipping_first_name' => 'required|min:3|max:30|regex:/^[A-Z,a-z][A-Z,a-z, ]+$/',
             'shipping_last_name' => 'required|min:3|max:30|regex:/^[A-Z,a-z][A-Z,a-z, ]+$/',
             'shipping_phone' => 'required|regex:/^([0-9][ -]*){9}+$/',
+            'shipping_dni' => 'required|regex:/^([0-9][ -]*){8}+$/',
             'address' => 'required|min:3|max:100',
             'payment_type' => 'required',
         ]);
@@ -58,6 +59,7 @@ class OrderController extends Controller
                 'shipping_last_name' => $request->shipping_last_name,
                 'shipping_email' => $request->shipping_email,
                 'shipping_phone' => $request->shipping_phone,
+                'shipping_dni' => $request->shipping_dni,
                 'address' => $request->address,
                 'state' => $request->state,
                 'post_code' => $request->post_code,

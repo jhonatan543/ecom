@@ -107,14 +107,14 @@ class CouponController extends Controller
     // status inactive ORDER
     public function Inac($or_id){
         Order::find($or_id)->update(['status' => 0]);
-        return Redirect()->back()->with('status','Pedido Finalizado');
+        return Redirect()->back()->with('statusrojo','Pedido Pendiente');
     }
 
 
     // status active ORDER
     public function Acti($or_id){
         Order::find($or_id)->update(['status' => 2]);
-        return Redirect()->back()->with('status','Pedido Pendiente');
+        return Redirect()->back()->with('statusfinalizado','Pedido Finalizado');
     }
 
     // status espera ORDER

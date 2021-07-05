@@ -39,6 +39,17 @@
                             <span class="text-danger">{{$message}}</span>
                           @enderror
 
+                          <input type="text" name="dni" class="form-control @error('dni') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $user->dni }}">
+                          @error('dni')
+                            <span class="text-danger">{{$message}}</span>
+                          @enderror
+
+                          <input type="text" name="telefono" class="form-control @error('telefono') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $user->telefono }}">
+                          @error('telefono')
+                            <span class="text-danger">{{$message}}</span>
+                          @enderror
+
+
                           <select class="form-control @error('status') is-invalid @enderror" name="status" >
                         @if($user->status == 2)
                         <option value="{{ $user->status }}" label="Administrador"></option>

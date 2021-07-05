@@ -41,6 +41,7 @@
 
 <!-- Breadcrumb Section Begin -->
 <section class="breadcrumb-section set-bg" data-setbg="{{ asset('fontend') }}/img/carrito.PNG">
+<img id="logo" src="{{ asset('fontend') }}/img/carrito.PNG" width="200" alt="Logo">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">

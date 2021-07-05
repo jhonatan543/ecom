@@ -93,9 +93,9 @@
                             <thead>
                                 <tr>
                                     <th class="shoping__product">Productos</th>
-                                    <th >Descripción</th>
-                                    <th>Precio</th>
-                                    <th>Cantidad</th>
+                                    <th class="shoping__product"  style="    padding-left: 50px;">Descripción</th>
+                                    <th class="shoping__product"  style="    padding-left: 50px;">Precio</th>
+                                    <th class="shoping__product">Cantidad</th>
                                     <th>Total</th>
                                     <th></th>
                                 </tr>
@@ -106,17 +106,19 @@
 
                                 <tr>
                                     <td class="shoping__cart__item">
+                                    <div class="d-flex flex-row">
                                         <img src="{{ asset($cart->product->image_one) }}" style="height: 70px; width:70px;" alt="">
                                         <h5>{{ $cart->product->product_name }}</h5>
+                                        </div>
                                     </td>
-                                    <td class="shoping__cart__total">
-                                         {{ $cart->product->short_description }}
+                                    <td class="shoping__cart__item" style="    padding-left: 50px;" >
+                                    <h5>{{ $cart->product->short_description }}</h5>
                                     </td>
-                                    <td class="shoping__cart__price">
-                                        S/.{{ $cart->price }}
+                                    <td class="shoping__cart__item" style="    padding-left: 50px;" >
+                                    <h5>S/.{{ $cart->price }}</h5>
                                     </td>
 
-                                    <td class="shoping__cart__quantity">
+                                    <td class="shoping__cart__item">
 
 
                                         <div class="quantity">
@@ -182,8 +184,8 @@
 
                         @if (Session::has('coupon'))
                             <li>Subtotal <span>S/.{{ $subtotal }}</span></li>
-                            <li>Coupon <span>{{ session()->get('coupon')['coupon_name'] }} <a href="{{ url('coupon/destroy') }}">X</a> </span></li>
-                            <li>Discount <span>{{ session()->get('coupon')['coupon_discount'] }}% ( S/.{{    session()->get('coupon')['discount_amount'] }} - )</span></li>
+                            <li>Cupón <span>{{ session()->get('coupon')['coupon_name'] }} <a href="{{ url('coupon/destroy') }}">X</a> </span></li>
+                            <li>Descuento <span>{{ session()->get('coupon')['coupon_discount'] }}% ( - S/.{{    session()->get('coupon')['discount_amount'] }} )</span></li>
                             <li>Total <span>S/.{{ $subtotal - session()->get('coupon')['discount_amount'] }}</span></li>
                         @else
                             <li>Total <span>S/.{{ $subtotal }}</span></li>

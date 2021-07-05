@@ -72,14 +72,18 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required|min:3|max:30|regex:/^[A-Z,a-z][A-Z,a-z, ]+$/',
             'email' => ['required','email',Rule::unique('users','email')],
+            'dni' => 'required|regex:/^([0-9][ -]*){8}+$/',
+            'telefono' => 'required|regex:/^([0-9][ -]*){9}+$/',
             'status' => 'required',
-            'password' => 'required|min:5'
+            'password' => ['required', 'string', 'min:5', 'confirmed'],
         ]);
 
 
         User::insert([
             'name' => $request->name,
             'email' => $request->email,
+            'dni' => $request->dni,
+            'telefono' => $request->telefono,
             'status' => $request->status,
             'password' => Hash::make($request->password),
             'created_at' => Carbon::now()
@@ -101,12 +105,16 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required|min:3|max:30|regex:/^[A-Z,a-z][A-Z,a-z, ]+$/',
             'email' => 'required',
+            'dni' => 'required|regex:/^([0-9][ -]*){8}+$/',
+            'telefono' => 'required|regex:/^([0-9][ -]*){9}+$/',
             'status' => 'required',
         ]);
 
         User::find($us_id)->update([
             'name' => $request->name,
             'email' => $request->email,
+            'dni' => $request->dni,
+            'telefono' => $request->telefono,
             'status' => $request->status,
             'updated_at' => Carbon::now()
         ]);
@@ -120,12 +128,16 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required|min:3|max:30|regex:/^[A-Z,a-z][A-Z,a-z, ]+$/',
             'email' => 'required',
+            'dni' => 'required|regex:/^([0-9][ -]*){8}+$/',
+            'telefono' => 'required|regex:/^([0-9][ -]*){9}+$/',
             'password' => 'required|min:5'
         ]);
 
         User::find($us_id)->update([
             'name' => $request->name,
             'email' => $request->email,
+            'dni' => $request->dni,
+            'telefono' => $request->telefono,
             'password' => Hash::make($request->password),
             'updated_at' => Carbon::now()
         ]);

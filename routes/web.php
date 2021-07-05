@@ -118,6 +118,9 @@ Route::get('coupon/destroy','CartController@couponDestroy');
 Route::get('add/to-wishlist/{prouct_id}','WishlistController@addToWishlist');
 Route::get('wishlist','WishlistController@wishPage');
 Route::get('wishlist/destroy/{wishlist_id}','WishlistController@destroy');
+//REDIRIGIR CARRITO Y DESEOS
+Route::get('ver/carrito/','CartController@verCarrito');
+Route::get('ver/deseo/','WishlistController@verDeseo');
 // ESTADISTICAS
 
 /* Route::get('admin/home','CartController@cartPage1'); */

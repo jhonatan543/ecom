@@ -58,10 +58,21 @@
 
 
 <!-- Breadcrumb Section End -->
+
 <section class="shoping-cart spad">
 <div class="container">
     <div class="row">
+
         <div class="col-sm-4">
+        @if(session('Usupdated1'))
+                  <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <strong>{{session('Usupdated1')}}</strong>
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    @endif
+
             @include('pages.profile.inc.sidebar')
 
         </div>
@@ -87,6 +98,23 @@
                             <span class="text-danger">{{$message}}</span>
                           @enderror
                   </div>
+
+                  <div class="form-group">
+                    <label for="exmEmail">DNI</label>
+                    <input type="text" class="form-control" id="exmEmail" aria-describedby="emailHelp" name="dni" placeholder="DNI" value="{{ Auth::user()->dni }}">
+                    @error('dni')
+                            <span class="text-danger">{{$message}}</span>
+                          @enderror
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exmEmail">Teléfono</label>
+                    <input type="text" class="form-control" id="exmEmail" aria-describedby="emailHelp" name="telefono" placeholder="Telefono" value="{{ Auth::user()->telefono }}">
+                    @error('telefono')
+                            <span class="text-danger">{{$message}}</span>
+                          @enderror
+                  </div>
+
                   <div class="form-group">
                     <label for="exmEmail">Contraseña</label>
                     <input type="password" class="form-control" id="exmEmail" aria-describedby="emailHelp" name="password" placeholder="Correo Electronico" value="{{ Auth::user()->password }}">

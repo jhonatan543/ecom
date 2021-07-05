@@ -118,6 +118,7 @@
                           <th scope="col">Nombre del Envío</th>
                           <th scope="col">Apellido del Envío </th>
                           <th scope="col">Correo del Envío</th>
+                          <th scope="col">DNI del Envío</th>
                           <th scope="col">Telefono del Envío</th>
                           <th scope="col">Dirección del Envío</th>
                           <th scope="col">Ciudad del Envío</th>
@@ -129,6 +130,7 @@
                           <td>{{ $shipping->shipping_first_name }}</td>
                           <td>{{ $shipping->shipping_last_name }}</td>
                           <td>{{ $shipping->shipping_email }}</td>
+                          <td>{{ $shipping->shipping_dni }}</td>
                           <td>{{ $shipping->shipping_phone }}</td>
                           <td>{{ $shipping->address }}</td>
                           <td>{{ $shipping->state }}</td>

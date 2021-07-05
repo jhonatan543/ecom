@@ -109,7 +109,8 @@ body {
                           <th style = "border: 1px solid #000;   ">Nombre del Envío</th>
                           <th style = "border: 1px solid #000;  ">Apellido del Envío </th>
                           <th style = "border: 1px solid #000;  ">Correo del Envío</th>
-                          <th style = "border: 1px solid #000;  ">Telefono del Envío</th>
+                          <th style = "border: 1px solid #000;  ">DNI del Envío</th>
+                          <th style = "border: 1px solid #000;  ">Teléfono del Envío</th>
                           <th style = "border: 1px solid #000;  ">Dirección del Envío</th>
                           <th style = "border: 1px solid #000;  ">Ciudad del Envío</th>
                           <th style = "border: 1px solid #000;  ">Código postal del Envío</th>
@@ -120,6 +121,7 @@ body {
                           <td style = "border: 1px solid #000; padding: 5px; word-wrap: break-word; ">{{ $shipping->shipping_first_name }}</td>
                           <td style = "border: 1px solid #000; padding: 5px; word-wrap: break-word;">{{ $shipping->shipping_last_name }}</td>
                           <td style = "border: 1px solid #000; padding: 5px;">{{ $shipping->shipping_email }}</td>
+                          <td style = "border: 1px solid #000; padding: 5px;">{{ $shipping->shipping_dni }}</td>
                           <td style = "border: 1px solid #000; padding: 5px;">{{ $shipping->shipping_phone }}</td>
                           <td style = "border: 1px solid #000; padding: 5px; word-wrap: break-word;">{{ $shipping->address }}</td>
                           <td style = "border: 1px solid #000; padding: 5px;">{{ $shipping->state }}</td>

@@ -83,9 +83,9 @@
                             <thead>
                                 <tr>
                                     <th class="shoping__product">Productos</th>
-                                    <th>Descripción</th>
-                                    <th>Precio</th>
-                                    <th>Carrito</th>
+                                    <th class="shoping__product" style="    padding-left: 50px;">Descripción</th>
+                                    <th class="shoping__product" style="    padding-left: 50px;">Precio</th>
+                                    <th class="shoping__product">Carrito</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -94,17 +94,19 @@
 
                                 <tr>
                                     <td class="shoping__cart__item">
+                                    <div class="d-flex flex-row">
                                         <img src="{{ asset($row->product->image_one) }}" style="height: 70px; width:70px;" alt="">
                                         <h5>{{ $row->product->product_name }}</h5>
+                                        </div>
                                     </td>
-                                    <td class="shoping__cart__price">
-                                        {{ $row->product->short_description }}
+                                    <td class="shoping__cart__item" style="    padding-left: 50px;">
+                                    <h5>{{ $row->product->short_description }}</h5>
                                     </td>
-                                    <td class="shoping__cart__price">
-                                        S/.{{ $row->product->price }}
+                                    <td class="shoping__cart__item" style="    padding-left: 50px;">
+                                    <h5>S/.{{ $row->product->price }}</h5>
                                     </td>
 
-                                    <td class="shoping__cart__price">
+                                    <td class="shoping__cart__item">
                                         <form action="{{ url('add/to-cart/'.$row->product_id) }}" method="POST">
                                             @csrf
                                         <input type="hidden" name="price" value="{{ $row->product->price }}">

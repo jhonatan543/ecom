@@ -20,6 +20,7 @@ class CreateShippingsTable extends Migration
             $table->string('shipping_last_name');
             $table->string('shipping_email');
             $table->string('shipping_phone');
+            $table->string('shipping_dni');
             $table->text('address');
             $table->string('state');
             $table->integer('post_code');

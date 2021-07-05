@@ -87,7 +87,7 @@
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Apellidos<span>*</span></p>
-                                        <input type="text" name="shipping_last_name">
+                                        <input type="text" name="shipping_last_name" placeholder="Ejem. Vila Buleje">
                                         @error('shipping_last_name')
                                      <strong class="text-danger">{{ $message }}</strong>
                                 @enderror
@@ -98,7 +98,7 @@
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Telefono<span>*</span></p>
-                                        <input type="text" name="shipping_phone" >
+                                        <input type="text" name="shipping_phone" placeholder="Ejem. 995894756" value="{{ Auth::user()->telefono }}" >
                                         @error('shipping_phone')
                                      <strong class="text-danger">{{ $message }}</strong>
                                 @enderror
@@ -113,15 +113,30 @@
                             </div>
                             <div class="checkout__input">
                                 <p>Dirección<span>*</span></p>
-                                <input type="text" placeholder="Avenida y Referencia" class="checkout__input__add" name="address">
+                                <input type="text" placeholder="Ejem. Avenida y Referencia" class="checkout__input__add" name="address">
                                 @error('address')
                                      <strong class="text-danger">{{ $message }}</strong>
                                 @enderror
                             </div>
-                            <div class="checkout__input">
-                                <p>Ciudad/Distrito<span>*</span></p>
-                                <input type="text" name="state" value="{{ 'Chorrillos' }}" readonly>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <p>DNI<span>*</span></p>
+                                        <input type="text" name="shipping_dni" placeholder="Ejem. 70845064" value="{{ Auth::user()->dni }}" >
+                                        @error('shipping_dni')
+                                     <strong class="text-danger">{{ $message }}</strong>
+                                @enderror
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                        <div class="checkout__input">
+                                        <p>Ciudad/Distrito<span>*</span></p>
+                                        <input type="text" name="state" value="{{ 'Chorrillos' }}" readonly>
+                                    </div>
+                                </div>
                             </div>
+
                             <div class="checkout__input">
                                 <p>Codigo Postal<span>*</span></p>
                                 <input type="text" name="post_code" value="{{ '15054' }}" readonly>
@@ -149,24 +164,24 @@
                         <input type="hidden" name="subtotal" value="{{ $subtotal }}">
                         <input type="hidden" name="total" value="{{ $subtotal }}">
                         @endif
-                                <h5>Metodo de Pago</h5>
+                                <h5 style="color: #1c1c1c;
+                                 font-weight: 700;">Metodo de Pago</h5>
                                 <br>
                                 <div class="">
                                     <label for="payment">
                                         <input type="text" id="payment" value="contraentrega" style="margin-bottom: 10px;
-                                        background-color: #25dc25b8;
-                                        border: 0px;" name="payment_type" readonly>
+                                        border: 0px; color: #6f6f6f; background-color: #f5f5f5;" name="payment_type" readonly>
                                         @error('payment_type')
                                      <strong class="text-danger">{{ $message }}</strong>
                                 @enderror
                                     </label>
                                 </div>
 
-                                <a onclick="mostrarterminos()" class="btn btn-warning" style="margin-bottom: 15px;
+                                <a onclick="mostrarterminos()" class="btn btn-secondary" style="margin-bottom: 15px; color: white;"
                                  ">Ver Términos y Condiciones</a>
 
-                                    <label >
-                                     <input type="checkbox" onclick="mostrarContenido()" id="presionar">
+                                    <label  >
+                                     <input  type="checkbox" onclick="mostrarContenido()" id="presionar">
                                      Acepto los Terminos y Condiciones
                                     </label>
                                 <button type="submit" id="partedet" class="site-btn" style="display: none;">REALIZAR PEDIDO</button>

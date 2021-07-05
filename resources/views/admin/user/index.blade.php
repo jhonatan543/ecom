@@ -34,10 +34,12 @@
                   <table id="datatable1" class="table display responsive nowrap">
                     <thead>
                       <tr>
-                        <th class="wd-15p">Id</th>
-                        <th class="wd-15p">Nombre</th>
+                        <th class="wd-5p">Id</th>
+                        <th class="wd-10p">Nombre</th>
                         <th class="wd-15p">Correo</th>
-                        <th class="wd-20p">Rol</th>
+                        <th class="wd-15p">DNI</th>
+                        <th class="wd-15p">Teléfono</th>
+                        <th class="wd-10p">Rol</th>
                         <th class="wd-10p">Accion</th>
                       </tr>
                     </thead>
@@ -50,6 +52,8 @@
                       <td>{{ $user->id }}</td>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
+                        <td>{{ $user->dni }}</td>
+                        <td>{{ $user->telefono }}</td>
                         <td>
                             @if($user->status == 1)
                             <span class="badge badge-warning">Cliente</span>
@@ -111,6 +115,17 @@
                             <span class="text-danger">{{$message}}</span>
                           @enderror
 
+                          <input type="text" name="dni" class="form-control @error('dni') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="DNI">
+                          @error('dni')
+                            <span class="text-danger">{{$message}}</span>
+                          @enderror
+
+                          <input type="text" name="telefono" class="form-control @error('telefono') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Telefono">
+                          @error('telefono')
+                            <span class="text-danger">{{$message}}</span>
+                          @enderror
+
+
                           <select class="form-control select2" name="status" data-placeholder="Choose country">
                         <option label="Escoja un Rol"></option>
                          <option value="1" label="Cliente"></option>
@@ -120,11 +135,16 @@
                             <span class="text-danger">{{$message}}</span>
                           @enderror
 
-                          <input type="text" name="password" class="form-control @error('password') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Contraseña">
+                          <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Contraseña">
                           @error('password')
                             <span class="text-danger">{{$message}}</span>
                           @enderror
+
+                          <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Confirmar Contraseña">
+
                         </div>
+
+
 
                         <button type="submit" class="btn btn-primary">Registrar</button>
                       </form>

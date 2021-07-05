@@ -34,6 +34,18 @@ class CartController extends Controller
 
     }
 
+    public function verCarrito(){
+        if (Auth::check() == true) {
+
+            return Redirect('/cart');
+
+        }else{
+            return Redirect()->route('login')->with('loginError','Primero Inicia Sesión en su Cuenta');
+
+            }
+        }
+
+
     // -------------- cart page --------------------
     public function cartPage(){
 
@@ -70,7 +82,7 @@ class CartController extends Controller
 
     public function quantityUpdate(Request $request,$cart_id){
 
-        if($request->qty <= 5){
+        if($request->qty <= 5 && $request->qty >= 1){
             Cart::where('id',$cart_id)->where('user_ip',request()->ip())->update([
                 'qty' => $request->qty,
             ]);

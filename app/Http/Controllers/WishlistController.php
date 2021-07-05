@@ -26,6 +26,16 @@ class WishlistController extends Controller
         return view('pages.wishlist',compact('wishlists'));
     }
 
+    public function verDeseo(){
+
+        if (Auth::check() == true) {
+            return Redirect('/wishlist');
+        }else{
+            return Redirect()->route('login')->with('loginError','Primero Inicia Sesión en su Cuenta');
+            }
+        }
+
+
      // --------- cart destroy ------
      public function destroy($wishlist_Id){
         Wishlist::where('id',$wishlist_Id)->where('user_id',Auth::id())->delete();
