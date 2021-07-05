@@ -16,7 +16,7 @@
                  @endphp
                     <ul>
                         @foreach ($categoriess as $row)
-                        <li><a href="{{url('/')}}">{{ $row->category_name }}</a></li>
+                        <li><a href="{{ url('category/product-show/'.$row->id) }}">{{ $row->category_name }}</a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -41,7 +41,6 @@
 
 <!-- Breadcrumb Section Begin -->
 <section class="breadcrumb-section set-bg" data-setbg="{{ asset('fontend') }}/img/carrito.PNG">
-<img id="logo" src="{{ asset('fontend') }}/img/carrito.PNG" width="200" alt="Logo">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">

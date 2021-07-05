@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="{{ asset('fontend') }}/css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="{{ asset('fontend') }}/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="{{ asset('fontend') }}/css/style.css" type="text/css">
-    <link type="text/css" rel="stylesheet" href="css/wasap.css">
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/wasap.css') }}">
 </head>
 
 <body>
@@ -807,7 +807,7 @@ c-29 16 -57 33 -62 38 -6 6 -12 10 -15 9 -4 -1 -43 -11 -88 -22z"/>
     <script src="{{ asset('fontend') }}/js/mixitup.min.js"></script>
     <script src="{{ asset('fontend') }}/js/owl.carousel.min.js"></script>
     <script src="{{ asset('fontend') }}/js/main.js"></script>
-    <script src="js/wasap.js"></script>
+    <script src="{{ asset('js/wasap.js') }}"></script>
 
 
 
