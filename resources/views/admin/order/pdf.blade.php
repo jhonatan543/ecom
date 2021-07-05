@@ -107,7 +107,7 @@ a {
       @endif
 
       @if($order->updated_at  == true)
-      <div><b>Fecha y hora de la Actualización del Estado :</b> {{ $updated_at }}</div>
+      <div><b>Fecha y hora de la Actualización del Estado :</b> {{ $order->updated_at }}</div>
       @else
       <div ><b>Fecha y hora de la Actualización del Estado :</b>
           @if($order->created_at  == true)
