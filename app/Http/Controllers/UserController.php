@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Order;
 use App\User;
+use App\Brand;
 use App\Product;
 use App\OrderItem;
 use App\Shipping;
@@ -60,6 +61,8 @@ class UserController extends Controller
 
         return view('admin.home',compact('orders','tiempo','products'));
     }
+
+
 
 // Delete category
     public function Delete($us_id){
@@ -169,5 +172,9 @@ public function Comprobar(Request $request){
     }
 
 }
+
+
+
+
 
 }

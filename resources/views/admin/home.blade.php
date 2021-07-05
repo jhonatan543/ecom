@@ -55,19 +55,33 @@
                      $productmin = $products->count('id');
                      $ldate = date('m');
                      $ldate1 = $ldate - '1';
+                     $ldate2 = $ldate + '1';
+                     $ldate3 = $ldate + '2';
                      @csrf
                      @endphp
 
                      <div>
-                     @if( $ldate === '06')
-                <span class="tx-11 tx-white-6">Junio</span>
-                @elseif( $ldate  === '07')
-                <span class="tx-11 tx-white-6">Julio</span>
-                @elseif( $ldate  === '08')
-                <span class="tx-11 tx-white-6">Agosto</span>
-                @elseif( $ldate  === '09')
-                <span class="tx-11 tx-white-6">Septiembre</span>
-                @endif
+                @switch($ldate)
+                    @case(04)
+                    <span class="tx-11 tx-white-6">Abril</span>
+                        @break
+                    @case(05)
+                    <span class="tx-11 tx-white-6">Mayo</span>
+                        @break
+                    @case(06)
+                    <span class="tx-11 tx-white-6">Junio</span>
+                        @break
+                    @case(07)
+                    <span class="tx-11 tx-white-6">Julio</span>
+                        @break
+                    @case($ldate2)
+                    <span class="tx-11 tx-white-6">Agosto</span>
+                        @break
+                    @case($ldate3)
+                    <span class="tx-11 tx-white-6">Septiembre</span>
+                        @break
+                @endswitch
+
 
               <h3 class="mg-b-0 tx-white tx-lato tx-bold">N° {{ $productmin }}</h3>
               </div>
@@ -77,13 +91,26 @@
                 <span class="tx-11 tx-white-6">CANTIDAD POR MES SIN SISTEMA </span>
               </div>
               <div>
-                @if( $ldate1 === 05)
-                <span class="tx-11 tx-white-6">Mayo</span>
-                @elseif( $ldate1  === 06)
-                <span class="tx-11 tx-white-6">Junio</span>
-                @elseif( $ldate1  === 07)
-                <span class="tx-11 tx-white-6">Julio</span>
-                @endif
+              @switch($ldate1)
+                    @case(04)
+                    <span class="tx-11 tx-white-6">Abril</span>
+                        @break
+                    @case(05)
+                    <span class="tx-11 tx-white-6">Mayo</span>
+                        @break
+                    @case(06)
+                    <span class="tx-11 tx-white-6">Junio</span>
+                        @break
+                    @case(07)
+                    <span class="tx-11 tx-white-6">Julio</span>
+                        @break
+                    @case($ldate2)
+                    <span class="tx-11 tx-white-6">Agosto</span>
+                        @break
+                    @case($ldate3)
+                    <span class="tx-11 tx-white-6">Septiembre</span>
+                        @break
+                @endswitch
                 <h6 class="tx-white mg-b-0">N° 45</h6>
               </div>
             </div><!-- -->
@@ -101,8 +128,8 @@
                      $ordercount= $orders->count('id');
                      @csrf
                      @endphp
-                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="white" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 65 65" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="65" height="65"
+	 viewBox="0 0 512 512" fill="white" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 <g>
 	<g>
 		<path d="M488.399,492h-21.933V173.536c0-14.823-12.06-26.882-26.882-26.882H390.56c-14.823,0-26.882,12.06-26.882,26.882V492
@@ -160,15 +187,26 @@
 </g>
 </svg>
               <div>
-              @if( $ldate  === '06')
-                <span class="tx-11 tx-white-6">Junio</span>
-                @elseif( $ldate  === '07')
-                <span class="tx-11 tx-white-6">Julio</span>
-                @elseif( $ldate  === '08')
-                <span class="tx-11 tx-white-6">Agosto</span>
-                @elseif( $ldate  === '09')
-                <span class="tx-11 tx-white-6">Septiembre</span>
-                @endif
+              @switch($ldate)
+                    @case(04)
+                    <span class="tx-11 tx-white-6">Abril</span>
+                        @break
+                    @case(05)
+                    <span class="tx-11 tx-white-6">Mayo</span>
+                        @break
+                    @case(06)
+                    <span class="tx-11 tx-white-6">Junio</span>
+                        @break
+                    @case(07)
+                    <span class="tx-11 tx-white-6">Julio</span>
+                        @break
+                    @case($ldate2)
+                    <span class="tx-11 tx-white-6">Agosto</span>
+                        @break
+                    @case($ldate3)
+                    <span class="tx-11 tx-white-6">Septiembre</span>
+                        @break
+                @endswitch
 
                 <h3 class="mg-b-0 tx-white tx-lato tx-bold">N° {{$ordercount}}</h3>
                 </div>
@@ -178,13 +216,26 @@
                 <span class="tx-11 tx-white-6">VENTAS POR MES SIN SISTEMA</span>
               </div>
               <div>
-              @if( $ldate1 === 05)
-                <span class="tx-11 tx-white-6">Mayo</span>
-                @elseif( $ldate1  === 06)
-                <span class="tx-11 tx-white-6">Junio</span>
-                @elseif( $ldate1  === 07)
-                <span class="tx-11 tx-white-6">Julio</span>
-                @endif
+              @switch($ldate1)
+                    @case(04)
+                    <span class="tx-11 tx-white-6">Abril</span>
+                        @break
+                    @case(05)
+                    <span class="tx-11 tx-white-6">Mayo</span>
+                        @break
+                    @case(06)
+                    <span class="tx-11 tx-white-6">Junio</span>
+                        @break
+                    @case(07)
+                    <span class="tx-11 tx-white-6">Julio</span>
+                        @break
+                    @case($ldate2)
+                    <span class="tx-11 tx-white-6">Agosto</span>
+                        @break
+                    @case($ldate3)
+                    <span class="tx-11 tx-white-6">Septiembre</span>
+                        @break
+                @endswitch
                 <h6 class="tx-white mg-b-0">N° 30</h6>
               </div>
             </div><!-- -->
@@ -197,8 +248,9 @@
               <a href="" class="tx-white-8 hover-white"><i class="icon ion-android-more-horizontal"></i></a>
             </div><!-- card-header -->
             <div class="d-flex align-items-center justify-content-between">
-            <svg version="1.1" id="Layer_1"  width="65" height="65" fill="white" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 65 65" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="65" height="65"
+	 viewBox="0 0 512 512" fill="white" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 <g>
 	<g>
 		<path d="M488.399,492h-21.933V173.536c0-14.823-12.06-26.882-26.882-26.882H390.56c-14.823,0-26.882,12.06-26.882,26.882V492
@@ -261,15 +313,26 @@
                      @endphp
 
                 <div>
-                     @if( $ldate  === '06')
-                <span class="tx-11 tx-white-6">Junio</span>
-                @elseif( $ldate  === '07')
-                <span class="tx-11 tx-white-6">Julio</span>
-                @elseif( $ldate  === '08')
-                <span class="tx-11 tx-white-6">Agosto</span>
-                @elseif( $ldate  === '09')
-                <span class="tx-11 tx-white-6">Septiembre</span>
-                @endif
+                @switch($ldate)
+                    @case(04)
+                    <span class="tx-11 tx-white-6">Abril</span>
+                        @break
+                    @case(05)
+                    <span class="tx-11 tx-white-6">Mayo</span>
+                        @break
+                    @case(06)
+                    <span class="tx-11 tx-white-6">Junio</span>
+                        @break
+                    @case(07)
+                    <span class="tx-11 tx-white-6">Julio</span>
+                        @break
+                    @case($ldate2)
+                    <span class="tx-11 tx-white-6">Agosto</span>
+                        @break
+                    @case($ldate3)
+                    <span class="tx-11 tx-white-6">Septiembre</span>
+                        @break
+                @endswitch
               <h3 class="mg-b-0 tx-white tx-lato tx-bold">S/.{{ $ordersum }}</h3>
               </div>
             </div><!-- card-body -->
@@ -278,13 +341,26 @@
                 <span class="tx-11 tx-white-6">GANANCIA POR MES SIN SISTEMA </span>
               </div>
               <div>
-              @if( $ldate1  === 05)
-                <span class="tx-11 tx-white-6">Mayo</span>
-                @elseif( $ldate1  === 06)
-                <span class="tx-11 tx-white-6">Junio</span>
-                @elseif( $ldate1  === 07)
-                <span class="tx-11 tx-white-6">Julio</span>
-                @endif
+              @switch($ldate1)
+                    @case(04)
+                    <span class="tx-11 tx-white-6">Abril</span>
+                        @break
+                    @case(05)
+                    <span class="tx-11 tx-white-6">Mayo</span>
+                        @break
+                    @case(06)
+                    <span class="tx-11 tx-white-6">Junio</span>
+                        @break
+                    @case(07)
+                    <span class="tx-11 tx-white-6">Julio</span>
+                        @break
+                    @case($ldate2)
+                    <span class="tx-11 tx-white-6">Agosto</span>
+                        @break
+                    @case($ldate3)
+                    <span class="tx-11 tx-white-6">Septiembre</span>
+                        @break
+                @endswitch
                 <h6 class="tx-white mg-b-0">S./1200</h6>
 
               </div>
@@ -292,17 +368,202 @@
             </div><!-- -->
           </div><!-- card -->
         </div><!-- col-3 -->
-        <center>
-        <img id="logo" src="{{ asset('fontend') }}/img/download.png" width="1000" style="background-color: white;
-            margin-left: 180px;
-            margin-top: 20px;" alt="Logo">
-        </center>
+
+
+        <div class="container-fluid d-flex justify-content-around pt-4">
+
+        <div id="barchart_material" style="width: 45%; height: 500px; border-style: inset;"></div>
+
+        <div id="barchart_material1" style="width: 45%; height: 500px; border-style: inset;"></div>
+        </div>
+
+
+
+
+
+
       </div><!-- row -->
 
     </div><!-- sl-pagebody -->
 
   </div><!-- sl-mainpanel -->
   <!-- ########## END: MAIN PANEL ########## -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+
+google.charts.load('current', {'packages':['bar']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+      ['Meses', 'Ventas', 'Productos'],
+
+      @php
+
+
+      switch ($ldate) {
+
+    case 04:
+        echo "['".'Enero'."', ".'25'.", ".'47'."],";
+        echo "['".'Febrero'."', ".'29'.", ".'45'."],";
+        echo "['".'Marzo'."', ".'28'.", ".'56'."],";
+        echo "['".'Abril'."', ".$ordercount.", ".$productmin."],";
+        break;
+    case 05:
+        echo "['".'Enero'."', ".'25'.", ".'47'."],";
+        echo "['".'Febrero'."', ".'29'.", ".'45'."],";
+        echo "['".'Marzo'."', ".'28'.", ".'56'."],";
+        echo "['".'Abril'."', ".'24'.", ".'49'."],";
+        echo "['".'Mayo'."', ".$ordercount.", ".$productmin."],";
+        break;
+    case 06:
+        echo "['".'Enero'."', ".'25'.", ".'47'."],";
+        echo "['".'Febrero'."', ".'29'.", ".'45'."],";
+        echo "['".'Marzo'."', ".'28'.", ".'56'."],";
+        echo "['".'Abril'."', ".'224'.", ".'49'."],";
+        echo "['".'Mayo'."', ".'27'.", ".'43'."],";
+        echo "['".'Junio'."', ".$ordercount.", ".$productmin."],";
+        break;
+    case 07:
+        echo "['".'Enero'."', ".'25'.", ".'47'."],";
+        echo "['".'Febrero'."', ".'29'.", ".'45'."],";
+        echo "['".'Marzo'."', ".'28'.", ".'56'."],";
+        echo "['".'Abril'."', ".'24'.", ".'49'."],";
+        echo "['".'Mayo'."', ".'27'.", ".'43'."],";
+        echo "['".'Junio'."', ".'26'.", ".'44'."],";
+        echo "['".'Julio'."', ".$ordercount.", ".$productmin."],";
+        break;
+    case $ldate2:
+        echo "['".'Enero'."', ".'25'.", ".'47'."],";
+        echo "['".'Febrero'."', ".'29'.", ".'45'."],";
+        echo "['".'Marzo'."', ".'28'.", ".'56'."],";
+        echo "['".'Abril'."', ".'24'.", ".'49'."],";
+        echo "['".'Mayo'."', ".'27'.", ".'43'."],";
+        echo "['".'Junio'."', ".'26'.", ".'44'."],";
+        echo "['".'Julio'."', ".'27'.", ".'46'."],";
+        echo "['".'Agosto'."', ".$ordercount.", ".$productmin."],";
+        break;
+    case $ldate3:
+        echo "['".'Enero'."', ".'25'.", ".'47'."],";
+        echo "['".'Febrero'."', ".'29'.", ".'45'."],";
+        echo "['".'Marzo'."', ".'28'.", ".'56'."],";
+        echo "['".'Abril'."', ".'24'.", ".'49'."],";
+        echo "['".'Mayo'."', ".'27'.", ".'43'."],";
+        echo "['".'Junio'."', ".'26'.", ".'44'."],";
+        echo "['".'Julio'."', ".'27'.", ".'46'."],";
+        echo "['".'Agosto'."', ".'22'.", ".'45'."],";
+        echo "['".'Septiembre'."', ".$ordercount.", ".$productmin."],";
+        break;
+
+
+        }
+
+      @endphp
+  ]);
+
+  var options = {
+    chart: {
+      title: 'Ventas | Productos ',
+      subtitle: 'Ventas y Productos por Mes',
+    },
+    bars: 'vertical'
+  };
+  var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+  chart.draw(data, google.charts.Bar.convertOptions(options));
+}
+</script>
+
+
+<script type="text/javascript">
+
+google.charts.load('current', {'packages':['bar']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+      ['Meses', 'Ganancia Bruta'],
+
+      @php
+
+
+      switch ($ldate) {
+
+    case 04:
+        echo "['".'Enero'."', ".'1200'."],";
+        echo "['".'Febrero'."', ".'1500'."],";
+        echo "['".'Marzo'."', ".'1300'."],";
+        echo "['".'Abril'."', ".$ordersum."],";
+        break;
+    case 05:
+        echo "['".'Enero'."', ".'1200'."],";
+        echo "['".'Febrero'."', ".'1500'."],";
+        echo "['".'Marzo'."', ".'1300'."],";
+        echo "['".'Abril'."', ".'1600'."],";
+        echo "['".'Mayo'."', ".$ordersum."],";
+        break;
+    case 06:
+        echo "['".'Enero'."', ".'1200'."],";
+        echo "['".'Febrero'."', ".'1500'."],";
+        echo "['".'Marzo'."', ".'1300'."],";
+        echo "['".'Abril'."', ".'1600'."],";
+        echo "['".'Mayo'."', ".'1100'."],";
+        echo "['".'Junio'."', ".$ordersum."],";
+        break;
+    case 07:
+        echo "['".'Enero'."', ".'1200'."],";
+        echo "['".'Febrero'."', ".'1500'."],";
+        echo "['".'Marzo'."', ".'1300'."],";
+        echo "['".'Abril'."', ".'1600'."],";
+        echo "['".'Mayo'."', ".'1100'."],";
+        echo "['".'Junio'."', ".'1250'."],";
+        echo "['".'Julio'."', ".$ordersum."],";
+        break;
+    case $ldate2:
+        echo "['".'Enero'."', ".'1200'."],";
+        echo "['".'Febrero'."', ".'1500'."],";
+        echo "['".'Marzo'."', ".'1300'."],";
+        echo "['".'Abril'."', ".'1600'."],";
+        echo "['".'Mayo'."', ".'1100'."],";
+        echo "['".'Junio'."', ".'1250'."],";
+        echo "['".'Julio'."', ".'1400'."],";
+        echo "['".'Agosto'."', ".$ordersum."],";
+        break;
+    case $ldate3:
+        echo "['".'Enero'."', ".'1200'."],";
+        echo "['".'Febrero'."', ".'1500'."],";
+        echo "['".'Marzo'."', ".'1300'."],";
+        echo "['".'Abril'."', ".'1600'."],";
+        echo "['".'Mayo'."', ".'1100'."],";
+        echo "['".'Junio'."', ".'1250'."],";
+        echo "['".'Julio'."', ".'1400'."],";
+        echo "['".'Agosto'."', ".'1350'."],";
+        echo "['".'Septiembre'."', ".$ordersum."],";
+        break;
+
+
+        }
+
+      @endphp
+  ]);
+
+  var options = {
+    chart: {
+      title: 'Ganancia Bruta | Mes',
+      subtitle: 'Ganancia Bruta Por Mes',
+    },
+    bars: 'vertical'
+  };
+  var chart = new google.charts.Bar(document.getElementById('barchart_material1'));
+  chart.draw(data, google.charts.Bar.convertOptions(options));
+}
+</script>
 
 
 

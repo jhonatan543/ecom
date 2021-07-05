@@ -22,6 +22,10 @@
     <link rel="stylesheet" href="{{ asset('fontend') }}/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="{{ asset('fontend') }}/css/style.css" type="text/css">
     <link type="text/css" rel="stylesheet" href="{{ asset('css/wasap.css') }}">
+
+
+
+
 </head>
 
 <body>
@@ -204,11 +208,11 @@ c-29 16 -57 33 -62 38 -6 6 -12 10 -15 9 -4 -1 -43 -11 -88 -22z"/>
         <a href="{{ url('https://www.facebook.com/Asociacion-de-comerciantes-santa-Isabel-De-Villa-SURCO-465793190470864') }}" target="_blank"><i class="fa fa-facebook"></i></a>
         </div>
         <div class="humberger__menu__contact">
-        <div class="d-flex flex-row ">
-                                <div class="d-flex ">
+        <div class="d-flex flex-column ">
+                                <div class="d-flex" style="margin-bottom: 10px;">
                                 a.pumallihua.quinte@gmail.com
                                 </div>
-                                <div class="d-flex " style="margin-left: 20px;">
+                                <div class="d-flex">
                                 La Mejor Tienda Online De Ropas 100% Recomendado
                                 </div>
                                 </div>
@@ -808,6 +812,9 @@ c-29 16 -57 33 -62 38 -6 6 -12 10 -15 9 -4 -1 -43 -11 -88 -22z"/>
     <script src="{{ asset('fontend') }}/js/owl.carousel.min.js"></script>
     <script src="{{ asset('fontend') }}/js/main.js"></script>
     <script src="{{ asset('js/wasap.js') }}"></script>
+
+
+
 
 
 

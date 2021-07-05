@@ -152,3 +152,5 @@ Route::get('user/orders-pdf/{id}','UserController@verPDF');
 Route::get('login/compro','UserController@Comprobar')->name('login.comprobacion');
 
 
+
+
