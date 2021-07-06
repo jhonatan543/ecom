@@ -549,6 +549,53 @@ DB::table('products')->insert([
     'image_three' => 'fontend/img/product/upload/bividinino1.png',
 ]);
 
+DB::table('products')->insert([
+    'category_id' => '1',
+    'brand_id' => '3',
+    'product_name' => 'Polo Amarillo recortado para Mujer',
+    'product_slug' => 'Polo Amarillo recortado para Mujer',
+    'product_code' => '6250',
+    'product_quantity' => '50',
+    'short_description' => 'POLO DISEÑO 7 SURTIDO COLOR',
+    'long_description' => 'Polo con diseño , confortable, con tela de buena calidad, que no puedes dejar de tener',
+    'price' => '50',
+    'image_one' => 'fontend/img/product/upload/polom1.png',
+    'image_two' => 'fontend/img/product/upload/polom2.png',
+    'image_three' => 'fontend/img/product/upload/polom3.png',
+]);
+
+DB::table('products')->insert([
+    'category_id' => '1',
+    'brand_id' => '3',
+    'product_name' => 'Blusa Amarilla M',
+    'product_slug' => 'Blusa',
+    'product_code' => '4080',
+    'product_quantity' => '50',
+    'short_description' => 'BLUSA DAMA MARTINA MT1 JHW MARSALA',
+    'long_description' => 'Blusa de gasa color sólido, de buena calidad, de lo último que sale en el mercado para el uso en
+			   tu día a día',
+    'price' => '47',
+    'image_one' => 'fontend/img/product/upload/blsm1.png',
+    'image_two' => 'fontend/img/product/upload/blsm2.png',
+    'image_three' => 'fontend/img/product/upload/blsm3.png',
+]);
+
+DB::table('products')->insert([
+    'category_id' => '1',
+    'brand_id' => '3',
+    'product_name' => 'Blusa Azul M',
+    'product_slug' => 'Blusa',
+    'product_code' => '7020',
+    'product_quantity' => '50',
+    'short_description' => 'BLUSA DAMA MAYTE MT2 JHW AZUL',
+    'long_description' => 'Blusa estampada, de color adecuado, buena tela, comodidad y de alta calidad garantizada
+			   para cualquier momento del día',
+    'price' => '48',
+    'image_one' => 'fontend/img/product/upload/blusdama1.png',
+    'image_two' => 'fontend/img/product/upload/blusdama2.png',
+    'image_three' => 'fontend/img/product/upload/blusdama3.png',
+]);
+
 
 
 // PEDIDOS
