@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{{ asset('fontend') }}/css/style.css" type="text/css">
     <link type="text/css" rel="stylesheet" href="{{ asset('css/wasap.css') }}">
 
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('fontend') }}/img/acomsiv.png" />
 
 
 

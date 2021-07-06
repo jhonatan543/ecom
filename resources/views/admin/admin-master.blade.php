@@ -44,6 +44,10 @@
     <link href="{{ asset('backend') }}/lib/summernote/summernote-bs4.css" rel="stylesheet">
     <!-- Starlight CSS -->
     <link rel="stylesheet" href="{{ asset('backend') }}/css/starlight.css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('fontend') }}/img/acomsiv.png" />
+
+
   </head>
 
   <body>

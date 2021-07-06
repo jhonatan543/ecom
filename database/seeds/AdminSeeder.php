@@ -103,7 +103,7 @@ class AdminSeeder extends Seeder
             'name' => 'Dayana',
             'email' => 'Dayana@gmail.com',
             'dni' => '42666691',
-            'telefono' => '970856276',
+            'telefono' => '970856275',
             'password' => Hash::make('12345'),
         ]);
         DB::table('users')->insert([

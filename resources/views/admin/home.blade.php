@@ -111,7 +111,7 @@
                     <span class="tx-11 tx-white-6">Septiembre</span>
                         @break
                 @endswitch
-                <h6 class="tx-white mg-b-0">N° 45</h6>
+                <h6 class="tx-white mg-b-0">N° 44</h6>
               </div>
             </div><!-- -->
           </div><!-- card -->
@@ -236,7 +236,7 @@
                     <span class="tx-11 tx-white-6">Septiembre</span>
                         @break
                 @endswitch
-                <h6 class="tx-white mg-b-0">N° 30</h6>
+                <h6 class="tx-white mg-b-0">N° 26</h6>
               </div>
             </div><!-- -->
           </div><!-- card -->
@@ -522,7 +522,7 @@ function drawChart() {
         echo "['".'Marzo'."', ".'1300'."],";
         echo "['".'Abril'."', ".'1600'."],";
         echo "['".'Mayo'."', ".'1100'."],";
-        echo "['".'Junio'."', ".'1250'."],";
+        echo "['".'Junio'."', ".'1200'."],";
         echo "['".'Julio'."', ".$ordersum."],";
         break;
     case $ldate2:
