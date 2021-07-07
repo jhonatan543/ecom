@@ -32,20 +32,20 @@ class AdminSeeder extends Seeder
 
         DB::table('users')->insert([
             'name' => 'Jhonatan',
-            'email' => 'jhonatan@gmail.com',
+            'email' => 'jhonatan20092009@gmail.com',
             'dni' => '70845064',
             'telefono' => '974271651',
             'status' => '2',
-            'password' => Hash::make('12345'),
+            'password' => Hash::make('jvila12345'),
         ]);
 
         DB::table('users')->insert([
             'name' => 'Renzo',
-            'email' => 'renzo@gmail.com',
+            'email' => 'renzocri123@gmail.com',
             'dni' => '75886691',
             'telefono' => '905206767',
             'status' => '2',
-            'password' => Hash::make('12345'),
+            'password' => Hash::make('rcri12345'),
         ]);
 
 
@@ -59,10 +59,10 @@ class AdminSeeder extends Seeder
 
         DB::table('users')->insert([
             'name' => 'Piter',
-            'email' => 'piter@gmail.com',
+            'email' => 'piter123@gmail.com',
             'dni' => '75730278',
             'telefono' => '915159039',
-            'password' => Hash::make('12345'),
+            'password' => Hash::make('pnolasco12345'),
         ]);
         DB::table('users')->insert([
             'name' => 'Calixto',
