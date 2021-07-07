@@ -62,7 +62,7 @@ class AdminSeeder extends Seeder
             'email' => 'piter123@gmail.com',
             'dni' => '75730278',
             'telefono' => '915159039',
-            'password' => Hash::make('pnolasco12345'),
+            'password' => Hash::make('nolasco12345'),
         ]);
         DB::table('users')->insert([
             'name' => 'Calixto',
