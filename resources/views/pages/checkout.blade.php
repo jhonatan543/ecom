@@ -122,7 +122,7 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
-                                        <p>DNI<span>*</span></p>
+                                        <p>DNI/Carnet de Extranjería<span>*</span></p>
                                         <input type="text" name="shipping_dni" placeholder="Ejem. 70845064" value="{{ Auth::user()->dni }}" >
                                         @error('shipping_dni')
                                      <strong class="text-danger">{{ $message }}</strong>
@@ -169,20 +169,24 @@
                                 <br>
                                 <div class="">
                                     <label for="payment">
-                                        <input type="text" id="payment" value="contraentrega" style="margin-bottom: 10px;
+                                        <input type="text" id="payment" value="contraentrega" style="margin-bottom: 5px;
                                         border: 0px; color: #6f6f6f; background-color: #f5f5f5;" name="payment_type" readonly>
                                         @error('payment_type')
                                      <strong class="text-danger">{{ $message }}</strong>
                                 @enderror
                                     </label>
                                 </div>
-
+                                <div style="margin-bottom: 10px;">
+                                    <h7 style="color: #1c1c1c;
+                                    font-weight: 700;  ">Ver Términos y Condiciones Para Continuar !</h7><br>
+                                </div>
                                 <a onclick="mostrarterminos()" class="btn btn-secondary" style="margin-bottom: 15px; color: white;"
-                                 ">Ver Términos y Condiciones</a>
+                                 >Términos y Condiciones</a>
 
                                     <label  >
-                                     <input  type="checkbox" onclick="mostrarContenido()" id="presionar">
+                                     <div style="display: none;" id="terminos"><input  type="checkbox" onclick="mostrarContenido()" id="presionar">
                                      Acepto los Terminos y Condiciones
+                                     </div>
                                     </label>
                                 <button type="submit" id="partedet" class="site-btn" style="display: none;">REALIZAR PEDIDO</button>
                             </div>
@@ -193,6 +197,12 @@
             </div>
         </div>
     </section>
+    <style>
+    .indicador {
+        text-align: left;
+        margin-top: 15px;
+}
+    </style>
 
     <!-- Checkout Section End -->
 @endsection
@@ -209,10 +219,13 @@
         }
     }
     function mostrarterminos() {
+        elemento = document.getElementById("terminos");
+            elemento.style.display='block';
+
         Swal.fire({
   title: '<a class="tyc">Términos y condiciones<br> "ACOMSIV"</a>',
    width: 600,
-  html: '<p class="indicador">1. LOS PEDIDOS SÓLO PODRÁN SER ENVIADOS A LAS PERSONAS QUE VIVEN DENTRO DE RANGO DE LUGARES A REALIZAR EL DELIVERY (SANTA ISABEL DE VILLA, BRISAS, 3 DE OCTUBRE, DELICIAS, TERRAZAS) 2. LOS HORARIOS DE ATENCIÓN PRESENCIAL SON DE LUNES A DOMINGO DE 10:00 AM A 7:00PM, CUALQUIER CAMBIO DE HORARIO SE     COMUNICARÁ A TRAVÉS DEL SITIO WEB. 3. LOS PAGOS POR EL PEDIDO ENTREGADO SERÁ REALIZADO EN CONTRAENTREGA. EN CASO SE DESEE REALIZAR EL PAGO OTRO DÍA, DEBE COMUNICARSE POR VÍA WHATSAPP CON LA DUEÑA DEL NEGOCIO PARA HACER LA COORDINACIÓN RESPECTIVA. 4. NO SE COBRARÁ NINGÚN PAGO ADICIONAL POR EL SERVICIO DE DELIVERY. 5. PARA PROSEGUIR CON LA ORDEN DEL PEDIDO DEBE SIEMPRE ESTAR DE ACUERDO Y ACEPTAR LOS TÉRMINOS Y CONDICIONES.</p>',
+  html: '<p class="indicador">1. LOS PEDIDOS SÓLO PODRÁN SER ENVIADOS A LAS PERSONAS QUE VIVEN DENTRO DE RANGO DE LUGARES A REALIZAR EL DELIVERY (SANTA ISABEL DE VILLA, BRISAS, 3 DE OCTUBRE, DELICIAS, TERRAZAS)</p> <p class="indicador">2. LOS HORARIOS DE ATENCIÓN PRESENCIAL SON DE LUNES A DOMINGO DE 10:00 AM A 7:00PM, CUALQUIER CAMBIO DE HORARIO SE     COMUNICARÁ A TRAVÉS DEL SITIO WEB.</p> <p class="indicador">3. LOS PAGOS POR EL PEDIDO ENTREGADO SERÁ REALIZADO EN CONTRAENTREGA. EN CASO SE DESEE REALIZAR EL PAGO OTRO DÍA, DEBE COMUNICARSE POR VÍA WHATSAPP CON LA DUEÑA DEL NEGOCIO PARA HACER LA COORDINACIÓN RESPECTIVA.</p> <p class="indicador">4. NO SE COBRARÁ NINGÚN PAGO ADICIONAL POR EL SERVICIO DE DELIVERY.</p> <p class="indicador">5. PARA PROSEGUIR CON LA ORDEN DEL PEDIDO DEBE SIEMPRE ESTAR DE ACUERDO Y ACEPTAR LOS TÉRMINOS Y CONDICIONES.</p>',
   imageUrl: '{{ asset('fontend') }}/img/acomsiv.png',
   imageWidth: 200,
   allowOutsideClick: false,
