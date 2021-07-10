@@ -41,6 +41,7 @@ Route::post('admin/users-store','UserController@StoreUs')->name('store.user');
 Route::get('admin/users/edit/{us_id}','UserController@Edit');
 Route::post('admin/users-update','UserController@UpdateUs')->name('update.user');
 Route::post('home','UserController@UpdateUs1')->name('update.user1');
+Route::post('home/contra','UserController@UpdateUsContra')->name('update.user2');
 Route::get('admin/users/inactive/{us_id}','UserController@Inactive');
 Route::get('admin/users/active/{us_id}','UserController@Active');
 //              gestionar admins

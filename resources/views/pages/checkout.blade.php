@@ -122,7 +122,7 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
-                                        <p>DNI/Carnet de Extranjería<span>*</span></p>
+                                        <p>DNI/CE<span>*</span></p>
                                         <input type="text" name="shipping_dni" placeholder="Ejem. 70845064" value="{{ Auth::user()->dni }}" >
                                         @error('shipping_dni')
                                      <strong class="text-danger">{{ $message }}</strong>

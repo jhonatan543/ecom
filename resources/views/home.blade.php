@@ -61,7 +61,7 @@
 
 <section class="shoping-cart spad">
 <div class="container">
-    <div class="row">
+    <div class="row" style="justify-content: flex-end;">
 
         <div class="col-sm-4">
         @if(session('Usupdated1'))
@@ -71,7 +71,16 @@
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
+        @elseif(session('Usupdated2'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <strong>{{session('Usupdated2')}}</strong>
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
                     @endif
+
+
 
             @include('pages.profile.inc.sidebar')
 
@@ -100,7 +109,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label for="exmEmail">DNI</label>
+                    <label for="exmEmail">DNI/CE</label>
                     <input type="text" class="form-control" id="exmEmail" aria-describedby="emailHelp" name="dni" placeholder="DNI" value="{{ Auth::user()->dni }}">
                     @error('dni')
                             <span class="text-danger">{{$message}}</span>
@@ -114,15 +123,33 @@
                             <span class="text-danger">{{$message}}</span>
                           @enderror
                   </div>
+                <button type="submit" class="btn btn-primary">Actualizar Perfil</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-8">
+          <div class="card">
+            <div class="card-body">
+              <form action="{{ route('update.user2') }}" method="POST">
+              @csrf
+              <input type="hidden" value="{{ Auth::user()->id }}" name="id">
 
                   <div class="form-group">
                     <label for="exmEmail">Contraseña</label>
-                    <input type="password" class="form-control" id="exmEmail" aria-describedby="emailHelp" name="password" placeholder="Correo Electronico" value="{{ Auth::user()->password }}">
+                    <input type="password" class="form-control" id="exmEmail" aria-describedby="emailHelp" name="password" placeholder="Contraseña" required >
                     @error('password')
                             <span class="text-danger">{{$message}}</span>
                           @enderror
                   </div>
-                <button type="submit" class="btn btn-primary">Actualizar</button>
+
+                  <div class="form-group">
+                  <label for="exmEmail">Confirmar Contraseña</label>
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Confirmar Contraseña">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Actualizar Contraseña</button>
               </form>
             </div>
           </div>

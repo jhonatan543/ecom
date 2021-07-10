@@ -75,7 +75,7 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required|min:3|max:30|regex:/^[A-Z,a-z][A-Z,a-z, ]+$/',
             'email' => ['required','email',Rule::unique('users','email')],
-            'dni' => 'required|regex:/^([0-9][ -]*){8}+$/',
+            'dni' => 'required|min:8|max:9|regex:/^([0-9][ -]*)+$/',
             'telefono' => 'required|regex:/^([0-9][ -]*){9}+$/',
             'status' => 'required',
             'password' => ['required', 'string', 'min:5', 'confirmed'],
@@ -108,7 +108,7 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required|min:3|max:30|regex:/^[A-Z,a-z][A-Z,a-z, ]+$/',
             'email' => 'required',
-            'dni' => 'required|regex:/^([0-9][ -]*){8}+$/',
+            'dni' => 'required|min:8|max:9|regex:/^([0-9][ -]*)+$/',
             'telefono' => 'required|regex:/^([0-9][ -]*){9}+$/',
             'status' => 'required',
         ]);
@@ -131,21 +131,36 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required|min:3|max:30|regex:/^[A-Z,a-z][A-Z,a-z, ]+$/',
             'email' => 'required',
-            'dni' => 'required|regex:/^([0-9][ -]*){8}+$/',
+            'dni' => 'required|min:8|max:9|regex:/^([0-9][ -]*)+$/',
             'telefono' => 'required|regex:/^([0-9][ -]*){9}+$/',
-            'password' => 'required|min:5'
         ]);
+
+
 
         User::find($us_id)->update([
             'name' => $request->name,
             'email' => $request->email,
             'dni' => $request->dni,
             'telefono' => $request->telefono,
-            'password' => Hash::make($request->password),
             'updated_at' => Carbon::now()
         ]);
 
         return Redirect()->route('home')->with('Usupdated1','Perfil Editado');
+    }
+
+    public function UpdateUsContra(Request $request){
+        $us_id = $request->id;
+
+        $request->validate([
+            'password' => ['required', 'string', 'min:5', 'confirmed'],
+        ]);
+
+        User::find($us_id)->update([
+            'password' => Hash::make($request->password),
+            'updated_at' => Carbon::now()
+        ]);
+
+        return Redirect()->route('home')->with('Usupdated2','Contraseña Editada');
     }
 
  // status inactive

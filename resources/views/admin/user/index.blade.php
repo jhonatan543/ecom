@@ -37,7 +37,7 @@
                         <th class="wd-5p">Id</th>
                         <th class="wd-10p">Nombre</th>
                         <th class="wd-15p">Correo</th>
-                        <th class="wd-15p">DNI</th>
+                        <th class="wd-15p">DNI/CE</th>
                         <th class="wd-15p">Teléfono</th>
                         <th class="wd-10p">Rol</th>
                         <th class="wd-10p">Accion</th>
@@ -115,7 +115,7 @@
                             <span class="text-danger">{{$message}}</span>
                           @enderror
 
-                          <input type="text" name="dni" class="form-control @error('dni') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="DNI">
+                          <input type="text" name="dni" class="form-control @error('dni') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="DNI/CE">
                           @error('dni')
                             <span class="text-danger">{{$message}}</span>
                           @enderror

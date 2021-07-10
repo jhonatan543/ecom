@@ -192,6 +192,7 @@ a {
         <table >
                       <thead>
                         <tr>
+                        <th style = "border: 1px solid #000; padding: 5px; ">Imagen del Producto</th>
                           <th style = "border: 1px solid #000; padding: 5px; ">Código del Producto </th>
                           <th style = "border: 1px solid #000; padding: 5px; ">Nombre del Producto</th>
                           <th style = "border: 1px solid #000; padding: 5px; ">Cantidad del Producto</th>
@@ -201,6 +202,9 @@ a {
                       <tbody>
                       @foreach ($orderItems as $row)
                         <tr>
+                        <td>
+                              <img src="{{ public_path($row->product->image_one) }}" height="60px;" width="60px;" alt="">
+                          </td>
                         <td style = "border: 1px solid #000; padding: 5px; word-wrap: break-word;">{{ $row->product->product_code }}</td>
                           <td style = "border: 1px solid #000; padding: 5px; word-wrap: break-word;">{{ $row->product->product_name }}</td>
                           <td style = "border: 1px solid #000; padding: 5px;">{{ $row->product_qty }}</td>
