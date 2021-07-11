@@ -149,7 +149,7 @@
                                 <div class="checkout__order__products">Productos <span>SubTotal</span></div>
                                 <ul>
                                     @foreach ($carts as $cart)
-                                    <li>{{  $cart->product->product_name }} ({{ $cart->qty }}) <span>S/.{{ $cart->price * $cart->qty }}</span></li>
+                                    <li><div class="cambiardiv">{{  $cart->product->product_name }} ({{ $cart->qty }})</div> <span>S/.{{ $cart->price * $cart->qty }}</span></li>
                                     @endforeach
                                 </ul>
 

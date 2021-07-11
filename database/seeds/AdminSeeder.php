@@ -597,6 +597,253 @@ DB::table('products')->insert([
 ]);
 
 
+//MAS PRODUCTOS 1007
+//adidas
+
+DB::table('products')->insert([
+    'category_id' => '1',
+    'brand_id' => '1',
+    'product_name' => 'Polo Adicolor Classics',
+    'product_slug' => 'Polo Adicolor Classics',
+    'product_code' => '82737',
+    'product_quantity' => '50',
+    'short_description' => 'Un Polo De Uso Diario Con Estilo Autentico',
+    'long_description' => 'Este polo adidas rinde homenaje a la energía del deporte clásico con un gran logo del Trifolio en el pecho',
+    'price' => '55',
+    'image_one' => 'fontend/img/product/upload/potrefoil.png',
+    'image_two' => 'fontend/img/product/upload/potrefoil1.png',
+    'image_three' => 'fontend/img/product/upload/potrefoil2.png',
+]);
+
+DB::table('products')->insert([
+    'category_id' => '1',
+    'brand_id' => '1',
+    'product_name' => 'Polera Capucha Adidas Z.N.E.',
+    'product_slug' => 'Polera Capucha Adidas Z.N.E.',
+    'product_code' => '94045',
+    'product_quantity' => '50',
+    'short_description' => 'Una Polera Holgada Para Moverte Con Confianza Y Comodidad',
+    'long_description' => 'El diseño con mangas de murcielago de esta polera adidas te permiten moverte con fluidez Sin límites',
+    'price' => '58',
+    'image_one' => 'fontend/img/product/upload/polerazne.png',
+    'image_two' => 'fontend/img/product/upload/polerazne1.png',
+    'image_three' => 'fontend/img/product/upload/polerazne2.png',
+]);
+
+DB::table('products')->insert([
+    'category_id' => '1',
+    'brand_id' => '1',
+    'product_name' => 'Polo Corto De Manga Larga',
+    'product_slug' => 'Polo Corto De Manga Larga',
+    'product_code' => '58293',
+    'product_quantity' => '50',
+    'short_description' => 'Un Polo Corto Para Tu Entrenamiento Diario',
+    'long_description' => 'Incorpora tecnología de absorción AEROREADY y tiene paneles de malla en la espalda. Úsalo para tu clase de barre, baile o de fitness en grupo en el parque.',
+    'price' => '45',
+    'image_one' => 'fontend/img/product/upload/pololargo.png',
+    'image_two' => 'fontend/img/product/upload/pololargo1.png',
+    'image_three' => 'fontend/img/product/upload/pololargo2.png',
+]);
+
+DB::table('products')->insert([
+    'category_id' => '1',
+    'brand_id' => '1',
+    'product_name' => 'Licras Adidas Sportswear',
+    'product_slug' => 'Licras Adidas Sportswear',
+    'product_code' => '69472',
+    'product_quantity' => '50',
+    'short_description' => 'Licras De Algodón Suave Que Combinan Comodidad Y Estilo',
+    'long_description' => 'Estas Licras Adidas Son Perfectas Para Ambos Escenarios. Su Tejido Jersey De AlgodóN Suave Y EláStico Te Envuelve Con Comodidad Para Que Te Puedas Sentir Bien Sin Importar La Actividad.',
+    'price' => '40',
+    'image_one' => 'fontend/img/product/upload/licraspre.png',
+    'image_two' => 'fontend/img/product/upload/licraspre1.png',
+    'image_three' => 'fontend/img/product/upload/licraspre2.png',
+]);
+
+DB::table('products')->insert([
+    'category_id' => '1',
+    'brand_id' => '1',
+    'product_name' => 'Pantalón Essentials',
+    'product_slug' => 'Pantalón Essentials',
+    'product_code' => '99254',
+    'product_quantity' => '50',
+    'short_description' => 'Un Pantalón Ajustado Con Piernas Cónicas Que Ofrece Comodidad En Todo Momento',
+    'long_description' => 'Este pantalón ofrece total comodidad fuera de la cancha gracias a su tejido tricot deportivo. Tiene un diseño ligero y ajustado con piernas cónicas. Las 3 Tiras en contraste saltan a la vista en los costados.',
+    'price' => '52',
+    'image_one' => 'fontend/img/product/upload/pantaese.png',
+    'image_two' => 'fontend/img/product/upload/pantaese1.png',
+    'image_three' => 'fontend/img/product/upload/pantaese2.png',
+]);
+
+
+DB::table('products')->insert([
+    'category_id' => '1',
+    'brand_id' => '1',
+    'product_name' => 'Top Deportivo Floral Ligero',
+    'product_slug' => 'Top Deportivo Floral Ligero',
+    'product_code' => '77240',
+    'product_quantity' => '50',
+    'short_description' => 'Un Top Deportivo De Soporte Ligero Para Movimientos Sin Restricciones',
+    'long_description' => 'Este top deportivo adidas ofrece soporte ligero para que puedas moverte con fluidez en todo momento. La tecnología de absorción AEROREADY mantiene tu cuerpo seco en los momentos más intensos del entrenamiento.',
+    'price' => '35',
+    'image_one' => 'fontend/img/product/upload/topfloral.png',
+    'image_two' => 'fontend/img/product/upload/topfloral1.png',
+    'image_three' => 'fontend/img/product/upload/topfloral2.png',
+]);
+
+
+DB::table('products')->insert([
+    'category_id' => '1',
+    'brand_id' => '1',
+    'product_name' => 'Top Deportivo Ultimate',
+    'product_slug' => 'Top Deportivo Ultimate',
+    'product_code' => '64132',
+    'product_quantity' => '50',
+    'short_description' => 'Sujeción Muy Alta Para Los Entrenamientos De Alto Impacto',
+    'long_description' => 'Este top deportivo se diseño para que te puedas enfrentar a cada entrenamiento con confianza y comodidad. Tiene un forro interno de malla para una mayor cobertura y una tira ajustable para que la puedas acomodar a la medida de tu cuerpo.',
+    'price' => '36',
+    'image_one' => 'fontend/img/product/upload/topultima.png',
+    'image_two' => 'fontend/img/product/upload/topultima1.png',
+    'image_three' => 'fontend/img/product/upload/topultima2.png',
+]);
+
+DB::table('products')->insert([
+    'category_id' => '3',
+    'brand_id' => '1',
+    'product_name' => 'Polo Pokémon',
+    'product_slug' => 'Polo Pokémon',
+    'product_code' => '76935',
+    'product_quantity' => '50',
+    'short_description' => 'Polo Deportivo Con El Estilo De Pokémon',
+    'long_description' => 'Luce detalles de diseño clásico y rinde tributo al país que inventó Pokémon',
+    'price' => '44',
+    'image_one' => 'fontend/img/product/upload/polopokem.png',
+    'image_two' => 'fontend/img/product/upload/polopokem1.png',
+    'image_three' => 'fontend/img/product/upload/polopokem2.png',
+]);
+
+//JOHNHOLDEN
+
+DB::table('products')->insert([
+    'category_id' => '1',
+    'brand_id' => '3',
+    'product_name' => 'Pantalón Dama Enzo Vino',
+    'product_slug' => 'Pantalón Dama Enzo Vino',
+    'product_code' => '62723',
+    'product_quantity' => '50',
+    'short_description' => 'Pantalón que no debe faltarte en tu armario',
+    'long_description' => 'Pantalón que no debe faltarte en tu armario, muy elegante combina con prendas negras y de rayas',
+    'price' => '54',
+    'image_one' => 'fontend/img/product/upload/pantaenzo.png',
+    'image_two' => 'fontend/img/product/upload/pantaenzo1.png',
+    'image_three' => 'fontend/img/product/upload/pantaenzo1.png',
+]);
+
+DB::table('products')->insert([
+    'category_id' => '1',
+    'brand_id' => '3',
+    'product_name' => 'Casaca Kanye Camel',
+    'product_slug' => 'Casaca Kanye Camel',
+    'product_code' => '74072',
+    'product_quantity' => '50',
+    'short_description' => 'Casaca para lucir comoda',
+    'long_description' => 'En este frío invierno podrás sentirte abrigada gracias a los materiales únicos y suaves de nuestra casaca para dama Kanye. Podrás tener lo mejor en esta temporada, al mismo tiempo poder lucir comoda y tener la practicidad de sacarte la casaca en caso cambie el clima',
+    'price' => '55',
+    'image_one' => 'fontend/img/product/upload/casakane.png',
+    'image_two' => 'fontend/img/product/upload/casakane1.png',
+    'image_three' => 'fontend/img/product/upload/casakane1.png',
+]);
+
+DB::table('products')->insert([
+    'category_id' => '1',
+    'brand_id' => '3',
+    'product_name' => 'Blusa Dama Martina Mt1',
+    'product_slug' => 'Blusa Dama Martina Mt1',
+    'product_code' => '64531',
+    'product_quantity' => '50',
+    'short_description' => 'Blusa de gasa color sólido para tu día a día',
+    'long_description' => 'Blusa de gasa color sólido para tu día a día, elegante infaltable para empezar tu dia con frescura',
+    'price' => '35',
+    'image_one' => 'fontend/img/product/upload/blusamarti.png',
+    'image_two' => 'fontend/img/product/upload/blusamarti1.png',
+    'image_three' => 'fontend/img/product/upload/blusamarti1.png',
+]);
+
+DB::table('products')->insert([
+    'category_id' => '1',
+    'brand_id' => '3',
+    'product_name' => 'Polo Dama Milan Azulino',
+    'product_slug' => 'Polo Dama Milan Azulino',
+    'product_code' => '68563',
+    'product_quantity' => '50',
+    'short_description' => 'Polo color sólido que no puedes dejar de tener',
+    'long_description' => 'Polo color sólido que no puedes dejar de tener , infaltable en reuniones con los amigos y familiares',
+    'price' => '40',
+    'image_one' => 'fontend/img/product/upload/polodami.png',
+    'image_two' => 'fontend/img/product/upload/polodami1.png',
+    'image_three' => 'fontend/img/product/upload/polodami1.png',
+]);
+
+DB::table('products')->insert([
+    'category_id' => '5',
+    'brand_id' => '3',
+    'product_name' => 'Pijama Guido Celeste/Azul',
+    'product_slug' => 'Pijama Guido Celeste/Azul',
+    'product_code' => '60251',
+    'product_quantity' => '50',
+    'short_description' => 'La pijama que necesitas para dormir',
+    'long_description' => 'La nueva colección de pijamas de temporada para hombre. Sentirás la máxima comodidad en cada puesta ya que cada prenda ha sido confeccionada con materiales de calidad.',
+    'price' => '65',
+    'image_one' => 'fontend/img/product/upload/pijamapro.png',
+    'image_two' => 'fontend/img/product/upload/pijamapro1.png',
+    'image_three' => 'fontend/img/product/upload/pijamapro2.png',
+]);
+
+DB::table('products')->insert([
+    'category_id' => '5',
+    'brand_id' => '3',
+    'product_name' => 'Pijama Edie Vino Melange',
+    'product_slug' => 'Pijama Edie Vino Melange',
+    'product_code' => '61736',
+    'product_quantity' => '50',
+    'short_description' => 'La pijama edie que necesitas para dormir comodamente',
+    'long_description' => 'Es por esto que te traemos la pijama Inv. Edie, para que puedas descansar tranquilamente y guardar el estilo único que caracteriza al caballero de esta época.',
+    'price' => '65',
+    'image_one' => 'fontend/img/product/upload/pijamaedie.png',
+    'image_two' => 'fontend/img/product/upload/pijamaedie1.png',
+    'image_three' => 'fontend/img/product/upload/pijamaedie2.png',
+]);
+
+DB::table('products')->insert([
+    'category_id' => '5',
+    'brand_id' => '3',
+    'product_name' => 'Boxer Johnny Negro',
+    'product_slug' => 'Boxer Johnny Negro',
+    'product_code' => '74111',
+    'product_quantity' => '50',
+    'short_description' => 'El boxer que no debe faltar en tu vida',
+    'long_description' => 'En este Boxer se emplearon materiales que aseguran su calidad, en ese sentido, el Algodón se incorporó en su fabricación para preservar la suavidad y confortabilidad.',
+    'price' => '15',
+    'image_one' => 'fontend/img/product/upload/boxerjohn.png',
+    'image_two' => 'fontend/img/product/upload/boxerjohn1.png',
+    'image_three' => 'fontend/img/product/upload/boxerjohn2.png',
+]);
+
+DB::table('products')->insert([
+    'category_id' => '5',
+    'brand_id' => '3',
+    'product_name' => 'Camiseta Tripack Blanco',
+    'product_slug' => 'Camiseta Tripack Blanco',
+    'product_code' => '97593',
+    'product_quantity' => '50',
+    'short_description' => 'Camiseta para hombre Tripack Infaltable en el closet',
+    'long_description' => 'Perfecto para usar con camisas formales y durante las largas jornadas laborales, te mantendrá fresco y cómodo ya que está fabricada de algodón, material que ofrece mayor suavidad y transpirabilidad.',
+    'price' => '30',
+    'image_one' => 'fontend/img/product/upload/camitripack.png',
+    'image_two' => 'fontend/img/product/upload/camitripack1.png',
+    'image_three' => 'fontend/img/product/upload/camitripack2.png',
+]);
+
 
 // PEDIDOS
 

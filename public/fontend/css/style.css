@@ -2221,8 +2221,19 @@ ol {
 .checkout__order ul li {
 	font-size: 16px;
 	color: #6f6f6f;
-	line-height: 40px;
+	line-height: 33px;
 	list-style: none;
+
+}
+/* lo que agrege */
+.checkout__order ul li .cambiardiv {
+	font-size: 16px;
+	color: #6f6f6f;
+	line-height: 33px;
+	list-style: none;
+    float: left;
+    width: 77%;
+
 }
 
 .checkout__order ul li span {
