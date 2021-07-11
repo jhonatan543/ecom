@@ -166,7 +166,7 @@ a {
                           <th style = "border: 1px solid #000;   ">Nombre del Envío</th>
                           <th style = "border: 1px solid #000;  ">Apellido del Envío </th>
                           <th style = "border: 1px solid #000;  ">Correo del Envío</th>
-                          <th style = "border: 1px solid #000;  ">DNI del Envío</th>
+                          <th style = "border: 1px solid #000;  ">DNI/CE del Envío</th>
                           <th style = "border: 1px solid #000;  ">Telefono del Envío</th>
                           <th style = "border: 1px solid #000;  ">Dirección del Envío</th>
                           <th style = "border: 1px solid #000;  ">Ciudad del Envío</th>

@@ -55,7 +55,7 @@
 
                   <div class="col-lg-4">
                     <div class="form-group">
-                      <label class="form-control-label">DNI: <span class="tx-danger">*</span></label>
+                      <label class="form-control-label">DNI/CE: <span class="tx-danger">*</span></label>
                       <input class="form-control" type="text" name="email" placeholder="Enter email address" value="{{ $shipping->shipping_dni }}" readonly>
                     </div>
                   </div><!-- col-4 -->

@@ -118,7 +118,7 @@
                           <th scope="col">Nombre del Envío</th>
                           <th scope="col">Apellido del Envío </th>
                           <th scope="col">Correo del Envío</th>
-                          <th scope="col">DNI del Envío</th>
+                          <th scope="col">DNI/CE del Envío</th>
                           <th scope="col">Telefono del Envío</th>
                           <th scope="col">Dirección del Envío</th>
                           <th scope="col">Ciudad del Envío</th>
